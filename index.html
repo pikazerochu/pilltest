@@ -10,77 +10,85 @@
                 left:8%;
                 width: 80%;
                 height: 45%;
-                border-radius:30px; 
-                border:1.5px solid #ffffff22;
+                border-radius:150px; 
+                border:7.5px solid #ffffff22;
                 z-index: 9;
             }
             .second_layer{
                 left:0px;
-                top:1px;
+                top:5px;
                 position:absolute;
                 background-color: #ffffff55;
                 width: 98%;
-                height: 26.4px;
-                border-radius:30px;
-                border:1.5px solid #ffffff22;
+                height: 132px;
+                border-radius:150px;
+                border:7.5px solid #ffffff22;
                 z-index: 8;
             }
             .bottom_layer{
                 position:relative;
                 background-color:#93aad4;
-                border-radius:30px;
-                width:94.5px;
-                height:33px;
+                border-radius:150px;
+                width:472.5px;
+                height:165px;
                 z-index: 5;
             }
             .first_layer{
                 position:absolute;
                 background-color: #ffffff88;
                 border:0px #ccc solid;
-                border-radius:30px;
-                width:94.5px;
-                height:33px;
+                border-radius:150px;
+                width:472.5px;
+                height:165px;
                 z-index: 7;
             } 
             .left_halfcircle_bottom{
                 position:absolute;
                 top:0px;
                 left:0px;
-                width: 16.5px;
-                height: 33px;
-                border-radius: 16.5px 0 0 16.5px ;
+                width: 82.5px;
+                height: 165px;
+                border-radius: 82.5px 0 0 82.5px ;
                 z-index: 6;
-                background-color: #18d2da;
-                opacity: 0;
+                background-color: #18d2da00;
+                
             }
             .right_halfcircle_bottom{
                 position:absolute;
                 top:0px;
-                left:78px;
-                width: 16.5px;
-                height: 33px;
-                border-radius: 0 16.5px 16.5px 0;
+                left:390px;
+                width: 82.5px;
+                height: 165px;
+                border-radius: 0 82.5px 82.5px 0;
                 z-index: 6;
-                background-color: #18d2da;
-                opacity: 0;
+                background-color: #18d2da00;
+                
             }
             .left_halfcircle_top{
                 position:absolute;
                 top:0px;
                 left:0px;
-                width: 16.5px;
-                height: 33px;
-                border-radius: 16.5px 0 0 16.5px ;
+                width: 82.5px;
+                height: 165px;
+                border-radius: 82.5px 0 0 82.5px ;
                 z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
             }
             .right_halfcircle_top{
                 position:absolute;
                 top:0px;
-                left:78px;
-                width: 16.5px;
-                height: 33px;
-                border-radius: 0 16.5px 16.5px 0;
+                left:390px;
+                width: 82.5px;
+                height: 165px;
+                border-radius: 0 82.5px 82.5px 0;
                 z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
             }
         </style>
     </head>
@@ -93,8 +101,12 @@
                     <div class="third_layer"></div>
                 </div>
             </div>
-            <div id="left_halfcircle_top" class="left_halfcircle_top"></div>
-            <div id="right_halfcircle_top" class="right_halfcircle_top"></div>
+            <div id="left_halfcircle_top" class="left_halfcircle_top">
+                回到今日
+            </div>
+            <div id="right_halfcircle_top" class="right_halfcircle_top">
+                選擇日期
+            </div>
         </div>
     </body>
 </html>
@@ -102,19 +114,19 @@
     left_halfcircle_top = document.getElementById("left_halfcircle_top")
     left_halfcircle_top.addEventListener('mouseover',function(){
         left_halfcircle_bottom = document.getElementById("left_halfcircle_bottom")
-        left_halfcircle_bottom.style.opacity="1";
+        left_halfcircle_bottom.style.background="#18d2daff";
     })
     left_halfcircle_top.addEventListener('mouseout',function(){
         left_halfcircle_bottom = document.getElementById("left_halfcircle_bottom")
-        left_halfcircle_bottom.style.opacity="0";
+        left_halfcircle_bottom.style.background="#18d2da00";
     })
     right_halfcircle_top = document.getElementById("right_halfcircle_top")
     right_halfcircle_top.addEventListener('mouseover',function(){
         right_halfcircle_bottom = document.getElementById("right_halfcircle_bottom")
-        right_halfcircle_bottom.style.opacity="1";
+        right_halfcircle_bottom.style.background="#18d2daff";
     })
     right_halfcircle_top.addEventListener('mouseout',function(){
         right_halfcircle_bottom = document.getElementById("right_halfcircle_bottom")
-        right_halfcircle_bottom.style.opacity="0";
+        right_halfcircle_bottom.style.background="#18d2da00";
     })
 </script>
